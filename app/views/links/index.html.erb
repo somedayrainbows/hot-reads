@@ -1,0 +1,14 @@
+<h1>Hot Reads!</h1>
+<div class="hot-links">
+  <table class='hot-links-table'>
+    <tbody>
+      <% @links.each.with_index do |link, index| %>
+        <tr>
+          <td>
+            <%= index + 1 %>: <%= link.url %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
