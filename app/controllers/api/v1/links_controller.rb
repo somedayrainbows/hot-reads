@@ -1,8 +1,14 @@
 class Api::V1::LinksController < ApplicationController
   skip_before_action :verify_authenticity_token
 
+  def index
+    @links = Link.all
+    render json: @links
+  end
+
   def create
-    @link = Link.find_by_url(link_params)
+    # require 'pry'; binding.pry
+    @link = Link.find_or_initialize_by(link_params)
     if @link.new_record?
       @link.total_reads = 1
       @link.save
