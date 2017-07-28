@@ -7,7 +7,6 @@ class Api::V1::LinksController < ApplicationController
   end
 
   def create
-    # require 'pry'; binding.pry
     @link = Link.find_or_initialize_by(link_params)
     if @link.new_record?
       @link.total_reads = 1
