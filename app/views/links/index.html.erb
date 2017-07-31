@@ -1,12 +1,17 @@
 <h1>Hot Reads!</h1>
 <div class="hot-links">
   <table class='hot-links-table'>
+    <thead>
+      <tr>
+        <th>Link</th>
+        <th>Hot Read Count</th>
+      </tr>
+    </thead>
     <tbody>
       <% @links.each.with_index do |link, index| %>
         <tr>
-          <td>
-            <%= index + 1 %>: <%= link.url %>
-          </td>
+          <td><%= index + 1 %>: <%= link.url %></td>
+          <td><%= link.total_reads %></td>
         </tr>
       <% end %>
     </tbody>
