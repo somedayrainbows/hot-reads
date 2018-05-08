@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem 'rails', '~> 5.0.4'
+gem 'rails', '~> 5.1', '>= 5.1.6'
 gem 'pg', '~> 0.18'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
